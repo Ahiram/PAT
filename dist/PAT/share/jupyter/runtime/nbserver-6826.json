@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/noselab/Downloads",
+  "password": false,
+  "pid": 6826,
+  "port": 8888,
+  "secure": false,
+  "token": "4b3901b825dfefbe42d0f2da2656db14cd10b0838ebfbb63",
+  "url": "http://localhost:8888/"
+}

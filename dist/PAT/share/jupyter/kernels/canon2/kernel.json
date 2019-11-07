@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "/home/noselab/anaconda3/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Canon2",
+ "language": "python"
+}
