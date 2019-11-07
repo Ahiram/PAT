@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['PAT.py'],
-             pathex=['/home/noselab/Desktop/PAT'],
+             pathex=['/home/noselab/Desktop/PATcopy'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -26,7 +26,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False , icon='icon.ico')
+          console=False )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

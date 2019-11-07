@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #!/home/noselab/anaconda3/envs/Canon2/bin python3.6
 import cv2
-import matplotlib.pyplot as plt
 import os
+import matplotlib.pyplot as plt
 import numpy as np
 import csv
 import copy
@@ -289,8 +289,3 @@ def twopoints(pots,numpo,ininum,fininum):
         writer=csv.writer(f)
         writer.writerows(segd)
     os.chdir(rd3)
-    for j in range(int(npoint/2)):
-        plt.plot(segd[:,int(npoint*2+npoint/2+j)],label="%d"%j,color=rgbcolorlist[j]/255)
-    plt.legend()
-    plt.savefig("figure_%s.png"%(filename+'_'+setname2))
-    plt.savefig("figure_%s.svg"%(filename+'_'+setname2))
