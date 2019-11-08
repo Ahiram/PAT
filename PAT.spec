@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['PAT.py'],
-             pathex=['/home/noselab/Desktop/PATcopy'],
+             pathex=['/home/noselab/Desktop/GitHub/a'],
              binaries=[],
              datas=[],
              hiddenimports=[],

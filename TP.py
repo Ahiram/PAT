@@ -58,7 +58,6 @@ def gofl2(setname,ts,pot,rd0,numpo,ininum,fininum):
     outputdurfname="%04d-%04d"%(initiation,int(initiation+duration-1))
     lwname='dep'
     csvfname='csv'
-    figfname='fig'
     try:
         os.mkdir(outputdurfname)
         rd00=os.path.join(rd0,outputdurfname)
@@ -76,11 +75,6 @@ def gofl2(setname,ts,pot,rd0,numpo,ininum,fininum):
         rd02=os.path.join(rd00,lwname)
     except:
         rd02=os.path.join(rd00,lwname)
-    try:
-        os.mkdir(figfname)
-        rd03=os.path.join(rd00,figfname)
-    except:
-        rd03=os.path.join(rd00,figfname)
     os.chdir(rd00)
     file = open('info_%s.txt'%(setname2), 'w')
     file.writelines(str("tiff name:%s"%(os.path.split(pot)[1]))+"\n")
@@ -89,7 +83,7 @@ def gofl2(setname,ts,pot,rd0,numpo,ininum,fininum):
     file.writelines(str("duration flames of anotation:%04d-%04d"%(initiation,int(initiation+duration-1)))+"\n")
     file.close()
    
-    return number_point,initiation,duration,rd01,rd02,rd03,outputdurfname
+    return number_point,initiation,duration,rd01,rd02,outputdurfname
 
 class Pointlist():
     def __init__(self,npo,nfl,inif):
@@ -231,7 +225,7 @@ def twopoints(pots,numpo,ininum,fininum):
 
     setname,filename,timest,pot,rd0=gofl(pots)
 
-    npoint,ini,dur,rd1,rd2,rd3,setname2=gofl2(setname,timest,pot,rd0,numpo,ininum,fininum)
+    npoint,ini,dur,rd1,rd2,setname2=gofl2(setname,timest,pot,rd0,numpo,ininum,fininum)
     img_pil = Image.open(pot)
 
     segd=np.zeros((dur,npoint*3))
@@ -288,4 +282,3 @@ def twopoints(pots,numpo,ininum,fininum):
 
         writer=csv.writer(f)
         writer.writerows(segd)
-    os.chdir(rd3)
